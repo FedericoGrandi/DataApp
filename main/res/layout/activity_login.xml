@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.federico.controllodati.ActivityLogin"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtReset"
+            android:layout_width="300dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/btnAccedi"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="76dp"
+            android:onClick="sendReset"
+            android:text="@string/lblReset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAccedi" />
+
+        <Button
+            android:id="@+id/btnAccedi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="134dp"
+            android:onClick="checkLogin"
+            android:text="@string/lbl_login"
+            app:layout_constraintBottom_toTopOf="@+id/txtReset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edtPassword"
+            android:layout_alignStart="@+id/edtPassword"
+            android:layout_marginBottom="46dp"
+            android:ems="10"
+            android:hint="@string/lbl_username"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="@string/lbl_password"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/btnAccedi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

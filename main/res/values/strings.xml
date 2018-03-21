@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ControlloDati</string>
+    <string name="lbl_login">Accedi</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_username">Nome Utente</string>
+    <string name="lbl_settings">Impostazioni</string>
+    <string name="lbl_exit">Esci</string>
+    <string name="lbl_temperature">Temperatura</string>
+    <string name="lbl_humidity">Umidità</string>
+    <string name="lbl_colors">Colori</string>
+    <string name="lbl_laboratorio_predefinito">Laboratorio Predefinito</string>
+    <string name="lbl_unit">Unità di misura</string>
+    <string name="lbl_celsius">Celsius</string>
+    <string name="lbl_fahreneit">Fahreneit</string>
+    <string name="lblReset">Tocca 2 volte per creare una nuova password</string>
+</resources>

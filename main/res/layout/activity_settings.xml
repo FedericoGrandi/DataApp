@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.federico.controllodati.ActivityLogin"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/btnFahreneit"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="107dp"
+            android:layout_toStartOf="@+id/txtUmiditaColor"
+            android:text="@string/lbl_fahreneit"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnCelsius"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnCelsius"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/btnFahreneit"
+            android:layout_toEndOf="@+id/txtImpostazioni"
+            android:text="@string/lbl_celsius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnFahreneit"
+            app:layout_constraintTop_toBottomOf="@+id/txtLaboratorioPredefinito" />
+
+        <TextView
+            android:id="@+id/txtGradi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnFahreneit"
+            android:layout_alignParentStart="true"
+            android:text="@string/lbl_unit"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnCelsius" />
+
+        <Spinner
+            android:id="@+id/spnLaboratoriCambio"
+            android:layout_width="224dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/txtTemperaturaColor"
+            android:layout_alignTop="@+id/txtLaboratorioPredefinito"
+            app:layout_constraintBottom_toBottomOf="@+id/txtLaboratorioPredefinito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtLaboratorioPredefinito" />
+
+        <TextView
+            android:id="@+id/txtLaboratorioPredefinito"
+            android:layout_width="95dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtUmiditaColor"
+            android:layout_marginTop="47dp"
+            android:text="@string/lbl_laboratorio_predefinito"
+            android:textSize="8pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtUmiditaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtTemperaturaColor"
+            android:layout_alignBottom="@+id/txtTemperaturaColor"
+            android:layout_alignEnd="@+id/spnLaboratoriCambio"
+            android:layout_marginEnd="33dp"
+            android:text="@string/lbl_humidity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtTemperaturaColor"
+            app:layout_constraintTop_toBottomOf="@+id/txtImpostazioni" />
+
+        <TextView
+            android:id="@+id/txtTemperaturaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtColori"
+            android:layout_toEndOf="@+id/txtGradi"
+            android:text="@string/lbl_temperature"
+            app:layout_constraintStart_toStartOf="@+id/txtImpostazioni"
+            app:layout_constraintTop_toBottomOf="@+id/txtImpostazioni" />
+
+        <TextView
+            android:id="@+id/txtImpostazioni"
+            android:layout_width="198dp"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="@string/lbl_settings"
+            android:textSize="15pt"
+            app:layout_constraintBottom_toTopOf="@+id/txtColori"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtColori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:text="@string/lbl_colors"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</android.support.constraint.ConstraintLayout>
